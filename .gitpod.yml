@@ -1,0 +1,22 @@
+# .gitpod.yml
+
+# Use the full VS Code environment
+vscode:
+  extensions:
+    - felixfbecker.php-intellisense
+
+# Specify the Docker image for your project
+image:
+  file: .gitpod.dockerfile
+
+# Specify initialization tasks
+tasks:
+  - command: ./init.sh
+    # You can create an initialization script (init.sh) to set up your project environment
+
+# Expose ports for PHP and MySQL
+ports:
+  - port: 8080
+    onOpen: ignore
+  - port: 3306
+    onOpen: ignore
